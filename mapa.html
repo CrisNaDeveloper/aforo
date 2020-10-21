@@ -363,15 +363,6 @@ var options = { enableHighAccuracy: true, maximumAge: 0, timeout: 60000 };
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
   alertify("Debes dar PERMISO de UBICACIÓN a la aplicación");
   infoWindow.setContent(
     browserHasGeolocation
@@ -380,6 +371,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+
 
     function doNothing() { }
   </script>
