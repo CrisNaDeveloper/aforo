@@ -372,6 +372,7 @@ var options = { enableHighAccuracy: true, maximumAge: 0, timeout: 60000 };
 }
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
+  alertify("Debes dar PERMISO de UBICACIÓN a la aplicación")
   infoWindow.setContent(
     browserHasGeolocation
       ? "Error: The Geolocation service failed."
